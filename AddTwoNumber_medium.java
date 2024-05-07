@@ -1,38 +1,14 @@
 package LeetCode;
 
-class ListNode {
-      int val;
-      ListNode next;
-      ListNode() {}
-      ListNode(int val) { this.val = val; }
-      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
+//class ListNode {
+//      int val;
+//      ListNode next;
+//      ListNode() {}
+//      ListNode(int val) { this.val = val; }
+//      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+//}
 
 public class AddTwoNumber_medium {
-    public static ListNode makeList(int[] a){
-        ListNode head = null;
-        ListNode tail = null;
-
-        for (int j : a) {
-            if (head == null) {
-                head = new ListNode(j, null);
-                tail = head;
-                continue;
-            }
-
-            tail.next = new ListNode(j, null);
-            tail = tail.next;
-        }
-        return head;
-    }
-
-    public static void displayList(ListNode head){
-        while(head != null){
-            System.out.print(head.val + " ");
-            head = head.next;
-        }
-    }
-
     public  static  ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode add;
         ListNode head = null;
@@ -76,8 +52,8 @@ public class AddTwoNumber_medium {
 
 //        int[] a = {2, 4, 3};
 //        int[] b = {5, 6, 4};
-        ListNode l1 = makeList(a);
-        ListNode l2 = makeList(b);
-        displayList(addTwoNumbers(l1, l2));
+        ListNode l1 = ListNode.GenerateList(a);
+        ListNode l2 = ListNode.GenerateList(b);
+        ListNode.displayList(addTwoNumbers(l1, l2));
     }
 }
