@@ -14,7 +14,7 @@ public class ListNode {
         this.val = val; this.next = next;
     }
 
-    public static ListNode GenerateList(int[] a){
+    public static ListNode generateList(int[] a){
         ListNode head = null;
         ListNode tail = null;
 

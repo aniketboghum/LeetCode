@@ -44,8 +44,8 @@ public class AddTwoNumber_medium {
 
 //        int[] a = {2, 4, 3};
 //        int[] b = {5, 6, 4};
-        ListNode l1 = ListNode.GenerateList(a);
-        ListNode l2 = ListNode.GenerateList(b);
+        ListNode l1 = ListNode.generateList(a);
+        ListNode l2 = ListNode.generateList(b);
         ListNode.displayList(addTwoNumbers(l1, l2));
     }
 }

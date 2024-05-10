@@ -18,7 +18,7 @@ public class ReverseLinkedList_easy {
 
     public static void main(String[] args) {
         int[] a = {1, 2, 3, 4};
-        ListNode head = ListNode.GenerateList(a);
+        ListNode head = ListNode.generateList(a);
 
         ListNode.displayList(reverseList(head));
     }

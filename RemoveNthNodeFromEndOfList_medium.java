@@ -24,7 +24,7 @@ public class RemoveNthNodeFromEndOfList_medium {
     public static void main(String[] args) {
         int[] a = {1,2,3,4,5};
 //        int[] a = {1, 2};
-        ListNode head = ListNode.GenerateList(a);
+        ListNode head = ListNode.generateList(a);
         ListNode.displayList(removeNthFromEnd(head, 2));
     }
 }
