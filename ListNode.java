@@ -1,6 +1,8 @@
 //helper class for Linked List questions
 package LeetCode;
 
+import java.util.List;
+
 public class ListNode {
     int val;
     ListNode next;
@@ -46,5 +48,29 @@ public class ListNode {
             head = head.next;
         }
         return count;
+    }
+
+    public static ListNode getReversedList(ListNode head)
+    {
+        ListNode revHead = null;
+
+        while (head != null)
+        {
+            ListNode temp = new ListNode();
+            temp.val = head.val;
+
+            if (revHead == null)
+            {
+                revHead = temp;
+            }
+            else
+            {
+                temp.next = revHead;
+                revHead = temp;
+            }
+
+            head = head.next;
+        }
+        return revHead;
     }
 }
