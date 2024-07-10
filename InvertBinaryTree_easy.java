@@ -1,5 +1,9 @@
 package LeetCode;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class InvertBinaryTree_easy
 {
     public static TreeNode invertTree(TreeNode root)
@@ -22,7 +26,7 @@ public class InvertBinaryTree_easy
     public static void main(String[] args)
     {
         int[] a = {4,2,7,1,3,6,9};
-        TreeNode r = TreeNode.generateTree(a);
+        TreeNode r = TreeNode.generateTree(TreeNode.makeArrayList(a));
         r = invertTree(r);
 
         TreeNode.displayTree(r);

@@ -1,5 +1,6 @@
 package LeetCode;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -20,31 +21,28 @@ public class TreeNode
       this.right = right;
     }
 
-    public static TreeNode generateTree(int[] arr)
+    public static TreeNode generateTree(ArrayList<Integer> arr)
     {
-        if (arr == null || arr.length == 0) {
+        if (arr == null || arr.isEmpty()) {
             return null;
         }
 
-        // Use Integer.MIN_VALUE as a sentinel value for null nodes
-        final int NULL_VALUE = Integer.MIN_VALUE;
-
-        TreeNode root = new TreeNode(arr[0]);
+        TreeNode root = new TreeNode(arr.get(0));
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
 
         int i = 1;
-        while (i < arr.length) {
+        while (i < arr.size()) {
             TreeNode current = queue.poll();
 
-            if (i < arr.length && arr[i] != NULL_VALUE) {
-                current.left = new TreeNode(arr[i]);
+            if (i < arr.size() && arr.get(i) != null) {
+                current.left = new TreeNode(arr.get(i));
                 queue.add(current.left);
             }
             i++;
 
-            if (i < arr.length && arr[i] != NULL_VALUE) {
-                current.right = new TreeNode(arr[i]);
+            if (i < arr.size() && arr.get(i) != null) {
+                current.right = new TreeNode(arr.get(i));
                 queue.add(current.right);
             }
             i++;
@@ -77,5 +75,15 @@ public class TreeNode
                 q.add(t.right);
             }
         }
+    }
+
+    public static ArrayList<Integer> makeArrayList(int[] a)
+    {
+        ArrayList<Integer> arr = new ArrayList<>();
+        for (int i : a)
+        {
+            arr.add(i);
+        }
+        return arr;
     }
 }
