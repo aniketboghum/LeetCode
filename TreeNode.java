@@ -1,3 +1,4 @@
+//Helper class for Tree Questions
 package LeetCode;
 
 import java.util.ArrayList;
@@ -75,6 +76,33 @@ public class TreeNode
                 q.add(t.right);
             }
         }
+    }
+
+    //Breadth first Traversal but returns a ArrayList
+    public static ArrayList<Integer> BreadthFirstTraversal(TreeNode root)
+    {
+        ArrayList<Integer> traversal = new ArrayList<>();
+        TreeNode currentNode;
+
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
+
+        while(!q.isEmpty())
+        {
+            currentNode = q.poll();
+
+            if (currentNode == null)
+            {
+                traversal.add(null);
+                continue;
+            }
+            q.add(currentNode.left);
+            q.add(currentNode.right);
+
+            traversal.add(currentNode.val);
+        }
+
+        return traversal;
     }
 
     public static ArrayList<Integer> makeArrayList(int[] a)
