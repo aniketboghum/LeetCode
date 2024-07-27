@@ -24,7 +24,8 @@ public class TreeNode
 
     public static TreeNode generateTree(ArrayList<Integer> arr)
     {
-        if (arr == null || arr.isEmpty()) {
+        if (arr == null || arr.isEmpty())
+        {
             return null;
         }
 
@@ -33,16 +34,17 @@ public class TreeNode
         queue.add(root);
 
         int i = 1;
-        while (i < arr.size()) {
+        while (i < arr.size())
+        {
             TreeNode current = queue.poll();
 
-            if (i < arr.size() && arr.get(i) != null) {
+            if (i < arr.size() && arr.get(i) != -1) {
                 current.left = new TreeNode(arr.get(i));
                 queue.add(current.left);
             }
             i++;
 
-            if (i < arr.size() && arr.get(i) != null) {
+            if (i < arr.size() && arr.get(i) != -1) {
                 current.right = new TreeNode(arr.get(i));
                 queue.add(current.right);
             }
