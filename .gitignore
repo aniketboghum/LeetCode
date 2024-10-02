@@ -2,4 +2,5 @@
 *.class
 *.xml
 *.iml
+*.gitignore
 out/production/LeetCode/LeetCode/.gitattributes
