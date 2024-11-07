@@ -1,6 +1,7 @@
 package LeetCode;
 
 import java.util.HashSet;
+import java.util.Optional;
 
 public class appleQuestion__easy {
 
@@ -20,7 +21,7 @@ public class appleQuestion__easy {
         {
             int target = diff+bobSizes[i];
             System.out.println(diff);
-            if(hs.contains(target)){
+            if(hs.contains(Optional.of(target))){
                 return new int[]{target, bobSizes[i]};
             }
         }
